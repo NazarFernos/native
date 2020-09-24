@@ -1,27 +1,28 @@
 function xerox_minimum_way(N, y, x) {
+    let Nx_All_time;
+    let time;
+    let _time;
+    let result_time;
     if (x < y) {
         Nx_All_time = N * x;
         time = y;
         _time = x;
-    }
-    else if (y < x) {
+    } else if (y < x) {
         Nx_All_time = N * y;
         time = x;
         _time = y;
-    }
-    else if (y == x) {
-        if(N % 2 == 0) {
+    } else if (y === x) {
+        if (N % 2 === 0) {
             result_time = N / 2 * x;
             return result_time;
-        }
-        else {
+        } else {
             result_time = Math.floor(N / 2) * x;
             result_time += x;
             return result_time;
         }
     }
     result_time = 0;
-    time2 = time;
+    let time2 = time;
     for (let i = 0; i < N;) {
         N = N - 1;
         result_time += _time;

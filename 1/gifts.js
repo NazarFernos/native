@@ -8,7 +8,7 @@ function solve(x, y, z, w) {
     for(let x_c = 0; x_c <= w / x; ++x_c) {
         for(let y_c = 0; y_c <= w / y; ++y_c) {
             for(let z_c = 0; z_c <= w / z; ++z_c){
-                if(x_c * x + y_c * y + z_c * z == w) {
+                if(x_c * x + y_c * y + z_c * z === w) {
                     result++;
                 }
             }
